@@ -1,4 +1,12 @@
 # File: main.py (FastAPI backend)
+import ee
+
+SERVICE_ACCOUNT = 'earth-engine-access@black-dahlia-477523.iam.gserviceaccount.com'
+KEY_PATH = '/etc/secrets/black-dahlia-477523-ca964bf59a51.json'
+
+credentials = ee.ServiceAccountCredentials(SERVICE_ACCOUNT, KEY_PATH)
+ee.Initialize(credentials)
+
 from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
 from typing import Optional
