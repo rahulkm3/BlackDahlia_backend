@@ -1,5 +1,8 @@
 # File: main.py (FastAPI backend)
 # trigger rebuild
+import subprocess
+subprocess.call("pip freeze", shell=True)
+
 import ee
 
 SERVICE_ACCOUNT = 'earth-engine-access@black-dahlia-477523.iam.gserviceaccount.com'
