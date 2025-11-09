@@ -1,7 +1,5 @@
 # File: main.py (FastAPI backend)
 # trigger rebuild
-import subprocess
-subprocess.call("pip freeze", shell=True)
 
 import ee
 
